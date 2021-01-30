@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="portfolio,software,developer,python,c,javascript">
+    <meta name="description" content="A portfolio site.">
+    <link rel="stylesheet" href="style.css">
+    <title>Adam Jijo</title>
+</head>
+<body>
+    <div id="bg"></div>
+    <div class="screen" id="screen1">
+        <div class="card">
+            <div class="dashboard">
+                <img id="profilePic" src="assets\itaots-heartbaby-profilepic.jpg">
+                <h1 id="myName">Adam Jijo</h1>
+                <h2 id="myDesc">
+                    Student at VIT, Vellore</br>
+                    Core Member STC-VIT</br>
+                    Aspiring Developer</br>
+                    Open-Source Enthusiast
+                </h2>
+            </div>
+            <div class="bubbles">
+                <div class="bubble" id="cBubble">
+                    <img src="assets\cplusplus.jfif">
+                    <h1 id="cTitle">C/C++</h1>
+                </div>
+                <div class="bubble" id="pythonBubble">
+                    <img src="assets\python-old.png">
+                    <h1 id="pythonTitle">Python</h1>
+                </div>
+                <div class="bubble" id="javascriptBubble">
+                    <img src="assets\javascript.png">
+                    <h1 id="javascriptTitle">JavaScript</h1>
+                </div>
+            </div>
+        </div>
+        <a href="#screen2">
+            <img src="assets/arrow-down.png" class="arrow">
+        </a>
+    </div>
+    <div class="screen" id="screen2">
+        <a href="#screen1" id="upBtn">
+            <img src="assets/arrow-up.png" class="arrow" href="#screen1">
+        </a>
+        <div class="carouselWrapper">
+            <div class="carousel">
+                <div class="card project" id="chess">
+                    <div class="projectInfo">
+                        <a href="https://github.com/lemonnuggets/chess">
+                            <h1 class="projectName">
+                                Chess
+                            </h1>
+                        </a>
+                        <h2 class="projectDesc">
+                            Create a room and play chess<br>
+                            with your friends online.<br>
+                            Make an account to keep track<br>
+                            of your wins and losses.
+                        </h2>
+                    </div>
+                    <div class="dashboard" width="600px">
+                        <video src="assets/chess-cropped-fast.mp4" margin="30px" height="500px" autoplay loop></video>
+                    </div>
+                </div>
+
+                <div class="card project" id="movieMan">
+                    <div class="projectInfo">
+                        <a href="https://github.com/lemonnuggets/movieman">
+                            <h1 class="projectName">
+                                Movie Man
+                            </h1>
+                        </a>
+                        <h2 class="projectDesc">
+                            A small python script you can<br>
+                            set to run at system startup<br>
+                            that will automatically manage<br>
+                            your movies for you.<br>
+                            Go to github to find out the features.
+                            <!-- <ol padding-left="0px">
+
+                            <li>
+                                Separate watched movies from<br>
+                                the movies that haven't been<br>
+                                watched.
+                            </li>
+                            <li>
+                                Automatically download movie<br>
+                                subtitles from various subtitle<br>
+                                providers.
+                            </li>
+                            <li>
+                                Automatically download movie<br>
+                                subtitles from various subtitle<br>
+                                providers.
+                            </li>
+                            </ol> -->
+                        </h2>
+                    </div>
+                    <div class="dashboard">
+                        <img src="assets/emoji-balance-bot.png" height="425px" class="projectPic">
+                    </div>
+                </div>
+
+                <div class="card project" id="fourier">
+                    <div class="projectInfo">
+                        <a href="https://github.com/lemonnuggets/fourier-epicycles">
+                            <h1 class="projectName">
+                                Fourier Epicycle Sketch
+                            </h1>
+                        </a>
+                        <h2 class="projectDesc">
+                            Sketch out any series of points <br>
+                            using fourier epicycles. Also<br>
+                            includes another application<br>
+                            to sketch out points you want to<br>
+                            use.
+                        </h2>
+                    </div>
+                    <div class="dashboard">
+                        <!-- <img src="assets/emoji-balance-bot.png" class="projectPic"> -->
+                        <video src="assets/fourier.mp4" height="425px" autoplay loop></video>
+                    </div>
+                </div>
+
+                <div class="card project" id="emoji">
+                    <div class="projectInfo">
+                        <a href="https://github.com/lemonnuggets/emoji-bot-twitter">
+                            <h1 class="projectName">
+                                Emoji Balance Bot
+                            </h1>
+                        </a>
+                        <h2 class="projectDesc">
+                            Tries to restore balance to</br>
+                            emoji usage by tweeting the</br>
+                            least tweeted emoji every</br>
+                            12 seconds.
+                        </h2>
+                    </div>
+                    <div class="dashboard">
+                        <img src="assets/emoji-balance-bot.png" height="425px"class="projectPic">
+                    </div>
+                </div>
+                <!-- <div class="links">
+                    <a href="#chess">CHESS</a>
+                    <a href="#movieMan">movieMan</a>
+                    <a href="#fourier">Fourier</a>
+                    <a href="#emoji">Emoji</a>
+                </div> -->
+            </div>
+        </div>
+        <img src="assets/arrow-left.png" id="prevBtn">
+        <img src="assets/arrow-right.png" id="nextBtn">
+        <script src="carousel.js"></script>
+    </div>
+</body>
+ <style> body  {opacity:0;}</style>
+ <script>
+  window.onload = function() {setTimeout(function(){document.body.style.opacity="100";},500);};
+ </script>
+</html>

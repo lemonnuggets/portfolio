@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::root{
+    --project-card-width: 100vw;
+}
+html::-webkit-scrollbar{
+    display: none;
+}
+html{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+body{
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+#bg{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(from 135deg at 50% 50%, #9A92FA  0deg, #09006C 360deg), #FFFFFF;
+    z-index: -1;
+}
+img{
+    width: 100px;
+    /* height: 100%; */
+}
+h1{
+    width: fit-content;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 44px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.03em;
+    /* Title Style */
+    color: rgba(9, 0, 108, 0.4);
+    margin: 30px;
+}
+h2{
+    width: fit-content;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 112.69%;
+    /* or 20px */
+    display: flex;
+    flex-direction: column;
+    /* SubTitle Style */
+    color: rgba(154, 146, 250, 0.5);
+    margin: 10px;
+}
+a{
+    width: fit-content;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 112.69%;
+    /* or 20px */
+    display: flex;
+    flex-direction: column;
+    /* SubTitle Style */
+    /* underline: none; */
+
+    color: rgba(154, 146, 250, 0.5);
+    /* color: #110874; */
+    margin: 10px;
+}
+.screen{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    scroll-snap-align: start;
+}
+.card{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    background: linear-gradient(119.56deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), rgba(196, 196, 196, 0.3);
+    box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.25);
+    border-radius: 43px;
+    backdrop-filter: blur(6px);
+    justify-content: space-between;
+    overflow: hidden;
+    margin: 50px;
+}
+.dashboard{
+    width: 33%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    mix-blend-mode: normal;
+    /* backdrop-filter: blur(6px); */
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 47px 0px 0px 47px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bubble{
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(22px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    width: min(90%, 500px);
+    margin: 50px;
+    border-radius: 138px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.bubbles{
+    height: max(100%, fit-content);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    justify-items: end;
+    align-content: flex-end;
+    align-items: center;
+}
+.carousel{
+    width: 200vw;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* overflow-x: scroll; */
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+.carouselWrapper::-webkit-scrollbar{
+    display: none;
+}
+.carouselWrapper{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    width: 100%;
+    overflow: auto;
+    margin: auto;
+}
+#screen2{
+    width: 100vw;
+    /* overflow-x: auto; */
+    /* overflow-x: hidden; */
+}
+.projectInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.projectDesc, .projectName{
+    margin: 30px 30px 30px 30px;
+    text-align: left;
+    text-shadow: black;
+}
+.projectPic{
+    width: max(200px, 100%);
+}
+.links{
+    position: relative;
+    top: 200px;
+    left : 0;
+}
+.project{
+    scroll-snap-align: center;
+    width: var(--project-card-width);
+}
+#upBtn{
+    position: relative;
+    /* top: 50px; */
+}
+#nextBtn{
+    position: absolute;
+    right: 50px;
+}
+#prevBtn{
+    position: absolute;
+    left: 50px;
+}
+#profilePic{
+    border-radius: 50%;
+    width: 30%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 1000px) {
+    #bg{
+        background-color: #09006C;
+    }
+    .dashboard{
+        width: 100%;
+        height: fit-content;
+        flex-direction: row;
+        border-radius: 47px 47px 0px 0px;
+    }
+    .card{
+        flex-direction: column;
+        /* width: max(60%, 500px); */
+        width: min(70%, fit-content);
+        height: min(70%, fit-content);
+    }
+    #profilePic{
+        width: max(10%, 70px);
+    }
+    .projectPic{
+        width: max(30%, 200px);
+    }
+    .project{
+        flex-direction: column-reverse;
+        overflow: hidden;
+        margin: 50px;
+    }
+    .projectInfo{
+        align-items: center;
+    }
+}
