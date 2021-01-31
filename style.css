@@ -28,6 +28,9 @@ img{
     width: 100px;
     /* height: 100%; */
 }
+video{
+    width: 100%;
+}
 h1{
     width: fit-content;
     font-family: Montserrat;
@@ -55,7 +58,7 @@ h2{
     display: flex;
     flex-direction: column;
     /* SubTitle Style */
-    color: rgba(154, 146, 250, 0.5);
+    color: rgba(154, 146, 250, 1);
     margin: 10px;
 }
 a{
@@ -86,7 +89,7 @@ a{
 }
 .card{
     width: fit-content;
-    height: fit-content;
+    height: 75vh;
     display: flex;
     background: linear-gradient(119.56deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), rgba(196, 196, 196, 0.3);
     box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.25);
@@ -97,7 +100,7 @@ a{
     margin: 50px;
 }
 .dashboard{
-    width: 33%;
+    width: 50%;
     height: 100%;
     background: rgba(255, 255, 255, 0.3);
     mix-blend-mode: normal;
@@ -160,8 +163,14 @@ a{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    width: 100%;
+    align-items: center;
+    /* background-color: #fff; */
 }
+.projectPic{
+    width: 100%;
+}
+/*
 .projectDesc, .projectName{
     margin: 30px 30px 30px 30px;
     text-align: left;
@@ -174,10 +183,13 @@ a{
     position: relative;
     top: 200px;
     left : 0;
-}
+} */
 .project{
     scroll-snap-align: center;
-    width: var(--project-card-width);
+    display: flex;
+    /* flex-direction: row-reverse; */
+    /* width: var(--project-card-width); */
+    width: 90vw;
 }
 #upBtn{
     position: relative;
@@ -186,10 +198,12 @@ a{
 #nextBtn{
     position: absolute;
     right: 50px;
+    transform: scale(0.5);
 }
 #prevBtn{
     position: absolute;
     left: 50px;
+    transform: scale(0.5);
 }
 #profilePic{
     border-radius: 50%;
@@ -210,10 +224,16 @@ a{
     .card{
         flex-direction: column;
         /* width: max(60%, 500px); */
-        width: min(70%, fit-content);
-        height: min(70%, fit-content);
+        width: max(70%, fit-content);
+        height: max(70%, fit-content);
     }
-    #profilePic{
+    .projectPic{
+        height: 100%;
+    }
+    video{
+        height: 100%;
+    }
+    /* #profilePic{
         width: max(10%, 70px);
     }
     .projectPic{
@@ -226,5 +246,5 @@ a{
     }
     .projectInfo{
         align-items: center;
-    }
+    } */
 }
