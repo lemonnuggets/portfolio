@@ -16,13 +16,21 @@ html{
 body{
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+
 }
 #bg{
     position: fixed;
     width: 100%;
     height: 100%;
-    background: conic-gradient(from 135deg at 50% 50%, #9A92FA  0deg, #09006C 360deg), #FFFFFF;
+    /* background-image: url('assets/background.png'); */
+    /* background: conic-gradient(from 135deg at 50% 50%, #9A92FA  0deg, #09006C 360deg), #FFFFFF; */
     z-index: -1;
+}
+body {
+  background-image: url('assets/background.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 img{
     width: 100px;
@@ -150,7 +158,6 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* overflow-x: scroll; */
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
 }
@@ -166,8 +173,6 @@ a{
 }
 #screen2{
     width: 100vw;
-    /* overflow-x: auto; */
-    /* overflow-x: hidden; */
 }
 .projectInfo{
     display: flex;
@@ -175,45 +180,29 @@ a{
     justify-content: center;
     width: 100%;
     align-items: center;
-    /* background-color: #fff; */
 }
 .projectPic{
     width: 100%;
 }
-/*
-.projectDesc, .projectName{
-    margin: 30px 30px 30px 30px;
-    text-align: left;
-    text-shadow: black;
-}
-.projectPic{
-    width: max(200px, 100%);
-}
-.links{
-    position: relative;
-    top: 200px;
-    left : 0;
-} */
 .project{
     scroll-snap-align: center;
     display: flex;
-    /* flex-direction: row-reverse; */
-    /* width: var(--project-card-width); */
     width: 90vw;
 }
 #upBtn{
     position: relative;
-    /* top: 50px; */
 }
 #nextBtn{
     position: absolute;
     right: 50px;
-    transform: scale(0.5);
+    transform: scale(0.4);
+    cursor: pointer;
 }
 #prevBtn{
     position: absolute;
     left: 50px;
-    transform: scale(0.5);
+    transform: scale(0.4);
+    cursor: pointer;
 }
 #profilePic{
     border-radius: 50%;
