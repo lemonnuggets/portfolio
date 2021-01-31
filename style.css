@@ -217,9 +217,6 @@ a{
 }
 
 @media screen and (max-width: 1000px) {
-    #bg{
-        background-color: #09006C;
-    }
     .dashboard{
         width: 100%;
         height: fit-content;
