@@ -124,11 +124,17 @@ a{
     align-items: center;
 }
 .links{
+    width: 80%;
     display: flex;
-    justify-content: center;
-    justify-items: center;
+    justify-content: space-between;
+    align-self: start;
+    align-content: flex-start;
+    /* justify-items: center; */
     align-items: center;
-    align-content: center;
+    /* align-content: center; */
+}
+.links a{
+    margin: 0;
 }
 .bubble{
     background: rgba(255, 255, 255, 0.2);
