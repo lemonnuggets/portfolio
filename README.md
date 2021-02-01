@@ -2,6 +2,8 @@
 
 A small portfolio site to draw attention to my skills and projects.
 
+[Click here for demo](https://lemonnuggets.github.io/portfolio/)
+
 ## TODO:
 
 - [ ] Make movement smooth when using on-screen buttons.
